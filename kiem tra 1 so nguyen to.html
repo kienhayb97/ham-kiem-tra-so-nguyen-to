@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function soNguyenTo() {
+        let nhapso=parseInt(prompt("nhap so can kiem tra"))
+        for (let i=2;i<nhapso;i++){
+            if ( nhapso%i==0){
+             return false  ;
+            }
+
+        }
+return true;
+    }
+    alert(soNguyenTo()?"day la so nguyen to":"ko phai");
+</script>
+</body>
+</html>

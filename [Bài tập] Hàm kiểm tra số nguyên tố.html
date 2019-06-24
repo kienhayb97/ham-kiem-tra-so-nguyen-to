@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapham;
+
+    function soNguyenTo(nhapso) {
+        if (nhapso<2){
+        return false}
+        if (nhapso%1){
+            return false;
+        }
+        for (let i = 2; i < nhapso; i++) {
+            if (nhapso % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function nhapMang() {
+        let mangNhapVao = [];
+        while (nhapham !== "ok") {
+            nhapham = prompt("nhap so de kiem tra");
+            mangNhapVao.push(nhapham);
+        }
+        mangNhapVao.pop();
+        return mangNhapVao
+    }
+    function kiemTra(mang) {
+
+        for (let i = 0; i < mang.length; i++) {
+            if (soNguyenTo(mang[i])) {
+                alert(mang[i]);
+            }
+        }
+    }
+    let mang = nhapMang();
+    kiemTra(mang);
+
+</script>
+</body>
+</html>
